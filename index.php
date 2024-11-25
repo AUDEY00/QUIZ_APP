@@ -61,9 +61,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP Quiz</title>
+    <script>
+        // Timer settings
+        let timeLeft = 60; 
+
+        function startTimer() {
+            const timerDisplay = document.getElementById('timer');
+            const timerForm = document.getElementById('quizForm');
+            
+            const interval = setInterval(() => {
+                if (timeLeft <= 0) {
+                    clearInterval(interval);
+                    alert("Time's up! Submitting your answers.");
+                    timerForm.submit();
+                } else {
+                    timerDisplay.textContent = `Time Left: ${timeLeft} seconds`;
+                    timeLeft--;
+                }
+            }, 1000);
+        }
+    </script>
 </head>
-<body>
+<body onload="startTimer()">
     <h1>PHP Quiz</h1>
+    <div id="timer" style="font-weight: bold; margin-bottom: 20px;">Time Left: 60 seconds</div>
     <form method="post" action="">
         <label for="username">Enter your name:</label><br>
         <input type="text" id="username" name="username" required><br><br>
