@@ -32,6 +32,18 @@ $leaderboards = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     <th>Date Taken</th>
                 </tr>
             </thead>
+            <tbody>
+                <?php
+                $rank = 1; 
+                foreach ($leaderboards as $row): ?>
+                    <tr>
+                        <td><?php echo $rank++; ?></td>
+                        <td><?php echo htmlspecialchars($row['Username']); ?></td>
+                        <td><?php echo $row['Score']; ?></td>
+                        <td><?php echo $row['datetaken']; ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
         </table>
     <?php else: ?>
         <p>No scores to display.</p>
