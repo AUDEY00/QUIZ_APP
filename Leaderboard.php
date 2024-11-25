@@ -17,9 +17,25 @@ $leaderboards = mysqli_fetch_all($result, MYSQLI_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Leaderboard</title>
 </head>
 <body>
-    
+    <h1>Leaderboard</h1>
+
+    <?php if ($leaderboards): ?>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Username</th>
+                    <th>Score</th>
+                    <th>Date Taken</th>
+                </tr>
+            </thead>
+        </table>
+    <?php else: ?>
+        <p>No scores to display.</p>
+    <?php endif; ?>
+    <a href="index.php">Back to Quiz</a>
 </body>
 </html>
