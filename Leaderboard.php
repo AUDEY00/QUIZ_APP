@@ -1,5 +1,5 @@
 <?php
-include "connection.php"; 
+include "Connect.php"; 
 
 
 $query = "SELECT Username, Score, datetaken FROM users ORDER BY Score DESC, datetaken ASC LIMIT 10";

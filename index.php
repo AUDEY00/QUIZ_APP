@@ -1,5 +1,5 @@
 <?php
-include "connection.php"; 
+include "Connect.php"; 
 
 
 $questions = [
@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "Error saving score: " . mysqli_stmt_error($stmt);
         } else {
             echo "<h2>Your Score: $score/" . count($questions) . "</h2>";
-            echo '<a href="index.php">Try Again</a> | <a href="leaderboards.php">View Leaderboard</a>';
+            echo '<a href="index.php">Try Again</a> | <a href="Leaderboard.php">View Leaderboard</a>';
         }
 
         mysqli_stmt_close($stmt);
