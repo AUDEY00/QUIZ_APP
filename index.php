@@ -6,12 +6,12 @@ $questions = [
     [
         "question" => "What does echo do in PHP?",
         "options" => ["Stops the execution of the script", "Outputs data to the screen", " Declares a variable", "Public Hypertext Preprocessor"],
-        "answer" => 2
+        "answer" => 1
     ],
     [
         "question" => "What symbol is used to denote a variable in PHP?",
         "options" => ["$", "@", "::", "#"],
-        "answer" => 1
+        "answer" => 0
     ],
     [
         "question" => "Which function is used to include a file in PHP?",
