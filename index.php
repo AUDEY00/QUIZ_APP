@@ -4,13 +4,13 @@ include "Connect.php";
 
 $questions = [
     [
-        "question" => "What does PHP stand for?",
-        "options" => ["Personal Home Page", "Private Home Page", "PHP: Hypertext Preprocessor", "Public Hypertext Preprocessor"],
+        "question" => "What does echo do in PHP?",
+        "options" => ["Stops the execution of the script", "Outputs data to the screen", " Declares a variable", "Public Hypertext Preprocessor"],
         "answer" => 2
     ],
     [
-        "question" => "Which symbol is used to access a property of an object in PHP?",
-        "options" => [".", "->", "::", "#"],
+        "question" => "What symbol is used to denote a variable in PHP?",
+        "options" => ["$", "@", "::", "#"],
         "answer" => 1
     ],
     [
@@ -20,7 +20,7 @@ $questions = [
     ]
 ];
 
-// Initialize score
+
 $score = 0;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
