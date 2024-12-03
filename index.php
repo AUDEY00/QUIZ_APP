@@ -101,6 +101,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </fieldset>
         <?php endforeach; ?>
         <input type="submit" value="Submit">
-    </form>
+    </form>      
 </body>
 </html>
